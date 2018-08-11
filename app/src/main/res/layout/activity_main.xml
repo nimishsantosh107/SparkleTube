@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.nimish.sparkletube.MainActivity"
+    android:background="@color/dark_grey"
+    >
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"
+        android:text="Sparkle"
+        android:textColor="#e1e1e1"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/header2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_toRightOf="@id/header"
+        android:background="@color/colorPrimary"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingTop="8dp"
+        android:text="Tube"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/youtubePlayer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/header">
+    </com.google.android.youtube.player.YouTubePlayerView>
+
+    <EditText
+        android:id="@+id/editVideoId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/youtubePlayer"
+        android:fontFamily="@font/hind_guntur_light"
+        android:hint="Enter video ID"
+        android:inputType="text"
+        android:textColor="#e1e1e1"
+        android:textColorHint="#e1e1e1"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_below="@+id/editVideoId"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:text="PLAY"
+        android:textColor="#e1e1e1"
+        android:textStyle="bold"
+        android:theme="@style/AppTheme"/>
+</RelativeLayout>
